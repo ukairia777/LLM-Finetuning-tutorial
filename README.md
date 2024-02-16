@@ -64,3 +64,24 @@
     --peft_model_path checkpoint-80 \
     --output_dir merged
 ```
+
+### Huggingface Submit
+```
+from huggingface_hub import HfApi
+api = HfApi()
+username = "허깅페이스 ID"
+
+MODEL_NAME = 'MyModel-Qwen72B-v1'
+
+api.create_repo(
+    token="허깅페이스 토큰",
+    repo_id=f"{username}/{MODEL_NAME}",
+    repo_type="model"
+)
+
+api.upload_folder(
+    token="허깅페이스 토큰",
+    repo_id=f"{username}/{MODEL_NAME}",
+    folder_path="merged",
+)
+```
