@@ -54,3 +54,13 @@
     --warmup_ratio 0.1 \
     --cutoff_len 4096 \
 ```
+
+### Merge
+```
+!wget https://raw.githubusercontent.com/ukairia777/LLM-Finetuning-tutorial/main/merge.py
+
+!python merge.py \
+    --base_model_name_or_path Qwen/Qwen1.5-72B \
+    --peft_model_path checkpoint-80 \
+    --output_dir merged
+```
