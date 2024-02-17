@@ -1,5 +1,5 @@
 # LLM-Finetuning-tutorial
-
+- 참고: https://github.com/ukairia777/tensorflow-nlp-tutorial/tree/main/23.%20LLM%20Fine-tuning
 - If you're fine-tuning LLaMa-2 7B, please add bf16=True and change fp16=False in the HF trainer. LLaMa-1 7B works as is. This only applies to LLaMa-2 7B. Additionally, if you are using 1 GPU, please change ddp_find_unused_paramters=False in the HF trainer. We will be updating the fine-tuning script to handle these changes automatically.
 - Example for how to calcualte gradient accumulation steps using 2 GPUs: = global_batch_size / micro_batch_size / num_gpus = 16 / 1 / 2 = 8.
 
